@@ -10,6 +10,8 @@ var engine, world;
 var player;
 var ground;
 
+var platform1, platform2, platform3, platform4;
+
 function setup()
 {
     //creating the canvas
@@ -20,10 +22,15 @@ function setup()
     world = engine.world;
 
     //creating the player body
-    player = new Player(300,780);
+    player = new Player(100,765);
 
     //creating the ground body
     ground = new Ground(600,790,1200,20);
+
+    platform1 = new Platform(320,700,200,20);
+    platform2 = new Platform(540,500,200,20);
+    platform3 = new Platform(940,350,200,20);
+    platform4 = new Platform(740,600,200,20);
         
     //running the engine
     Engine.run(engine);
@@ -39,6 +46,11 @@ function draw()
 
     //displaying the ground
     ground.display();
+
+    platform1.display();
+    platform2.display();
+    platform3.display();
+    platform4.display();
 
     //making sprites visible
     drawSprites();

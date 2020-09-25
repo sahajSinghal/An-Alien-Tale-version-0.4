@@ -9,7 +9,8 @@ class Player
         {
             friction : 1,
             isStatic : false,
-            density: 0.8
+            density: 0.8,
+            restitution: 0
         }
 
         //creating the player's body

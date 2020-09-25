@@ -7,7 +7,7 @@ class Ground
         //making the player have a bit of friction and making it static
         var options =
         {
-            friction : 1,
+            friction : 2000,
             isStatic : true,
         }
 
