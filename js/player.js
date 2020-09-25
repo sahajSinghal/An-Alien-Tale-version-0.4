@@ -44,15 +44,13 @@ class Player
     move()
     {
         //if space is pressed then we apply force upward and towards right
-        if(keyCode===32)
-        {
-            Matter.Body.applyForce(this.body,this.body.position,{x : displayWidth/100 , y : -(displayHeight/100)}); 
-        }
+        Matter.Body.applyForce(this.body,this.body.position,{x : 40 , y : -30});
+       
+    }
 
+    move2()
+    {
         //if a is pressed then we apply force upward and towards left
-        if(keyCode ===97)
-        {
-            Matter.Body.applyForce(this.body,this.body.position,{x : -(displayWidth/100) , y : -(displayHeight/100)}); 
-        }
+        Matter.Body.applyForce(this.body,this.body.position,{x : -(displayWidth/100) , y : -(displayHeight/100)}); 
     }
 }

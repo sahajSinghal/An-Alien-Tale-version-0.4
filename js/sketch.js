@@ -36,7 +36,6 @@ function draw()
 
     //displaying and moving the player
     player.display();
-    player.move();
 
     //displaying the ground
     ground.display();
@@ -46,4 +45,17 @@ function draw()
 
     //making sprites visible
     drawSprites();
+}
+
+function keyPressed()
+{
+    if(keyCode === RIGHT_ARROW)
+    {
+        Matter.Body.applyForce(player.body,player.body.position,{x : 40 , y : -30});
+    }
+
+    if(keyCode === LEFT_ARROW)
+    {
+        Matter.Body.applyForce(player.body,player.body.position,{x : -(displayWidth/100) , y : -(displayHeight/100)});
+    }
 }
