@@ -4,13 +4,12 @@ class Player
     //making constructor which accepts x and y
     constructor(x,y)
     {
-        //making the player have a bit of friction and making it non-static
+        //making the player have a bit of friction, adding density to it and making it non-static
         var options = 
         {
-            friction : 1,
+            friction : 10,
             isStatic : false,
             density: 0.8,
-            restitution: 0
         }
 
         //creating the player's body
@@ -24,7 +23,7 @@ class Player
 
     display()
     {
-        //making rectMode as center and making the rectangular body
+        //making the rectangular body
         rectMode(CENTER);
         rect(this.body.position.x,this.body.position.y,this.width,this.height);
     }

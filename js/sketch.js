@@ -10,6 +10,7 @@ var engine, world;
 var player;
 var ground;
 
+//variables for platforms
 var platform1, platform2, platform3, platform4, platform5;
 
 function setup()
@@ -27,6 +28,7 @@ function setup()
     //creating the ground body
     ground = new Ground(600,790,1200,20);
 
+    //creating the platforms
     platform1 = new Platform(320,700,200,20);
     platform2 = new Platform(540,500,200,20);
     platform3 = new Platform(740,600,200,20);
@@ -48,6 +50,7 @@ function draw()
     //displaying the ground
     ground.display();
 
+    //displaying the platforms
     platform1.display();
     platform2.display();
     platform3.display();
@@ -58,6 +61,7 @@ function draw()
     drawSprites();
 }
 
+//function keyPressed to move the player
 function keyPressed()
 {
     if(keyCode === RIGHT_ARROW)

@@ -4,14 +4,14 @@ class Ground
     //constructor which accepts x, y, width, height
     constructor(x,y,width,height)
     {
-        //making the player have a bit of friction and making it static
+        //making the ground have a bit of friction and making it static
         var options =
         {
             friction : 2000,
             isStatic : true,
         }
 
-        //making the player's body
+        //making the ground's body
         this.body = Bodies.rectangle(x,y,width,height,options);
         this.width = width;
         this.height = height;
@@ -22,7 +22,7 @@ class Ground
 
     display()
     {
-        //making rectMode center and creating the rect 
+        //creating the rectangular body 
         rectMode(CENTER);
         rect(this.body.position.x,this.body.position.y,this.width,this.height);
     }
