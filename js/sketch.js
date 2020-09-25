@@ -10,7 +10,7 @@ var engine, world;
 var player;
 var ground;
 
-var platform1, platform2, platform3, platform4;
+var platform1, platform2, platform3, platform4, platform5;
 
 function setup()
 {
@@ -29,8 +29,9 @@ function setup()
 
     platform1 = new Platform(320,700,200,20);
     platform2 = new Platform(540,500,200,20);
-    platform3 = new Platform(940,350,200,20);
-    platform4 = new Platform(740,600,200,20);
+    platform3 = new Platform(740,600,200,20);
+    platform4 = new Platform(990,470,200,20);
+    platform5 = new Platform(840,260,200,20);
         
     //running the engine
     Engine.run(engine);
@@ -51,6 +52,7 @@ function draw()
     platform2.display();
     platform3.display();
     platform4.display();
+    platform5.display();
 
     //making sprites visible
     drawSprites();
