@@ -34,6 +34,10 @@ function setup()
     platform3 = new Platform(740,600,200,20);
     platform4 = new Platform(990,470,200,20);
     platform5 = new Platform(840,260,200,20);
+
+    //changing camera position to player's position
+    camera.position.x = player.body.position.x;
+    camera.position.y = player.body.position.y;
         
     //running the engine
     Engine.run(engine);
