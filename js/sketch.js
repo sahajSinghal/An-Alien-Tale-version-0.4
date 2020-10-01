@@ -57,10 +57,6 @@ function draw()
     platform4.display();
     platform5.display();
 
-    //changing camera position to player's position
-    camera.position.x = player.body.position.x;
-    camera.position.y = player.body.position.y;
-
     //making sprites visible
     drawSprites();
 }

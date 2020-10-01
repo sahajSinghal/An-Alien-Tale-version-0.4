@@ -26,5 +26,8 @@ class Player
         //making the rectangular body
         rectMode(CENTER);
         rect(this.body.position.x,this.body.position.y,this.width,this.height);
+
+        camera.position.x = this.body.position.x
+        camera.position.y = this.body.position.y;
     }
 }
