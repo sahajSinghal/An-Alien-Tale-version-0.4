@@ -18,12 +18,15 @@ class Ground
 
         //adding it to the world
         World.add(world,this.body);
+
+        //making the sprite to display the ground
+        this.groundSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
     }
 
     display()
     {
-        //creating the rectangular body 
-        rectMode(CENTER);
-        rect(this.body.position.x,this.body.position.y,this.width,this.height);
+        //updating the position of the ground's sprite
+        this.groundSprite.x = this.body.position.x;
+        this.groundSprite.y = this.body.position.y;
     }
 }

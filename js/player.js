@@ -19,15 +19,19 @@ class Player
 
         //adding it to the world
         World.add(world,this.body);
+
+        //making the sprite to display the player
+        this.playerSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
     }
 
     display()
     {
-        //making the rectangular body
-        rectMode(CENTER);
-        rect(this.body.position.x,this.body.position.y,this.width,this.height);
-
+        //making camera position equal to player' position
         camera.position.x = this.body.position.x
         camera.position.y = this.body.position.y;
+
+        //updating the position of the player's sprite  
+        this.playerSprite.x = this.body.position.x;
+        this.playerSprite.y = this.body.position.y;
     }
 }

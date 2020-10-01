@@ -18,12 +18,15 @@ class Platform
 
         //adding it to the world
         World.add(world,this.body);
+
+        //making the sprite to display the platforms
+        this.platformSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
     }
 
     display()
     {
-        //creating the rectangular body
-        rectMode(CENTER);
-        rect(this.body.position.x,this.body.position.y,this.width,this.height);
+        //updating the position of the platform's sprites
+        this.platformSprite.x = this.body.position.x;
+        this.platformSprite.y = this.body.position.y;
     }
 }
