@@ -175,13 +175,16 @@ function draw()
 //function keyPressed to move the player
 function keyPressed()
 {
-    if(keyCode === RIGHT_ARROW)
+    if(gameState === "forest")
     {
-        Matter.Body.applyForce(player.body,player.body.position,{x : 20 , y : -100});
-    }
+        if(keyCode === RIGHT_ARROW)
+        {
+            Matter.Body.applyForce(player.body,player.body.position,{x : 20 , y : -100});
+        }
 
-    if(keyCode === LEFT_ARROW)
-    {
-        Matter.Body.applyForce(player.body,player.body.position,{x : -20 , y : -100});
+        if(keyCode === LEFT_ARROW)
+        {
+            Matter.Body.applyForce(player.body,player.body.position,{x : -20 , y : -100});
+        }
     }
 }
