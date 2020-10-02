@@ -142,10 +142,95 @@ function draw()
         })
     }
 
+    if(gameState === "screen3")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen3();
+        story.displayButton();
+
+        //changing gameState to "screen4" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen4";
+        })
+    }
+
+    if(gameState === "screen4")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen4();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen5";
+        })
+    }
+
+    if(gameState === "screen5")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen5();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen6";
+        })
+    }
+
+    if(gameState === "screen6")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen6();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen7";
+        })
+    }
+
+    if(gameState === "screen7")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen7();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen8";
+        })
+    }
+
+    if(gameState === "screen8")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen8();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen9";
+        })
+    }
+
+    if(gameState === "screen9")
+    {
+
+        //displaying the dialougue and nextButton
+        story.displayScreen9();
+        story.displayButton();
+
+        //changing gameState to "screen5" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "forest";
+        })
+    }
+
     if(gameState === "forest")
     {
-        //hiding the startButtons if gameState is forest
-        startButtons.hide();
+        //hiding the last elements of the story
+        story.hide();
 
         //displaying the player
         player.display();
@@ -167,6 +252,8 @@ function draw()
         platform5.display();
         platform5.platformSprite.visible = true;
     }
+
+    console.log(gameState);
 
     //making sprites visible
     drawSprites();

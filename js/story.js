@@ -93,13 +93,19 @@ class Story
 
     displayScreen3()
     {
+        //hiding the previous element
+        this.screen2.hide();
+
         //displaying screen3
-        this.screen3.html("There was a huge rebellion against... <br> The so believed 'EVIL' ruler of the place...");
-        this.screen3.position(50,100);
+        this.screen3.html("There was a huge rebellion against... <br> <br> The so believed 'EVIL' ruler of the place...");
+        this.screen3.position(500,100);
     }
 
     displayScreen4()
     {
+        //hiding the previous element
+        this.screen3.hide();
+
         //displaying screen4
         this.screen4.html("DRACO")
         this.screen4.position(580,100);
@@ -107,36 +113,51 @@ class Story
 
     displayScreen5()
     {
+        //hiding the previous element
+        this.screen4.hide();
+
         //displaying screen5
-        this.screen5.html("the people believed <br> he was the evil spirit <br> who was driving 'their' place towards ruin")
-        this.screen5.position(50,100);
+        this.screen5.html("The people believed, <br> <br> he was the evil spirit <br> <br> who was driving 'their' place towards ruin")
+        this.screen5.position(500,100);
     }
 
     displayScreen6()
     {
+        //hiding the previous element
+        this.screen5.hide();
+
         //displaying screen6
-        this.screen6.html("the strongest people of the place <br> rebelled against Draco <br> and succeeded in making him... <br> A Meagre Spirit");
-        this.screen6.position(50,100);
+        this.screen6.html("The strongest people of the place <br><br> rebelled against Draco <br><br> and succeeded in making him... <br><br> A Meagre Spirit");
+        this.screen6.position(500,100);
     }
 
     displayScreen7()
     {
+        //hiding the previous element
+        this.screen6.hide();
+
         //displaying screen7
-        this.screen7.html("However... <br> they knew that his return was inevitable...");
-        this.screen7.position(50,100);
+        this.screen7.html("However... <br><br> they knew that his return was inevitable...");
+        this.screen7.position(500,100);
     }
 
     displayScreen8()
     {
+        //hiding the previous element
+        this.screen7.hide();
+
         //displaying screen8
         this.screen8.html("NO, we seem to be losing our connection");
-        this.screen8.position(50,100);
+        this.screen8.position(500,100);
     }
     
     displayScreen9()
     {
+        //hiding the previous element
+        this.screen8.hide();
+    
         //displaying screen9
-        this.screen9.html("PLEASE... <br> remember your task and don't lose your way........");
-        this.screen9.position(50,100);    
+        this.screen9.html("PLEASE... <br><br> remember your task and don't lose your way........");
+        this.screen9.position(500,100);    
     }
 }
