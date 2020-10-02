@@ -13,13 +13,13 @@ class StartButtons
         this.newGameButton.style('background-color','white');
         this.newGameButton.style('font-size','25px');
         this.newGameButton.style('font-face','georgia');
-        this.newGameButton.style('border','2px solid #555555');
+        this.newGameButton.style('border','5px solid #555555');
         this.newGameButton.position(550,600);
 
         this.newGameButton.mousePressed(()=>
         {
-            //gameState should change to forest if the newGameButton is pressed
-            gameState = "forest";
+            //gameState should change to askName if the newGameButton is pressed
+            gameState = "askName";
         })
     }
 

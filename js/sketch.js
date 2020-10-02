@@ -22,6 +22,9 @@ var startImage;
 //creating the variable for the start buttons
 var startButtons;
 
+//creating the variable for the story object
+var story;
+
 function preload()
 {
     //loading the startImage
@@ -60,6 +63,9 @@ function setup()
     //creating the object from the StartButtons class
     startButtons = new StartButtons();
 
+    //creating the object from the Story class
+    story = new Story();
+
     //running the engine
     Engine.run(engine);
 }
@@ -77,6 +83,63 @@ function draw()
 
         //displaying the startButtons
         startButtons.display();
+    }
+
+    if(gameState === "askName")
+    {
+        //changing background to white
+        background("white");
+
+        //hiding the startButtons
+        startButtons.hide();
+
+        //displaying the dialougue and nextButton
+        story.displayWeAreConnected();
+        story.displayButton();
+
+        if(player.name!== "")
+        {
+            //changing gameState to "interesting" if next is pressed and player's name is not null
+            story.nextButton.mousePressed(()=>{
+                gameState = "interesting";
+            })
+        }
+    }
+
+    if(gameState === "interesting")
+    {
+        //displaying the dialougue and nextButton
+        story.displayInterestingName();
+        story.displayButton();
+
+        //changing gameState to "screen1" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen1";
+        })
+    }
+
+    if(gameState === "screen1")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen1();
+        story.displayButton();
+
+        //changing gameState to "screen2" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen2";
+        })
+    }
+
+    if(gameState === "screen2")
+    {
+        //displaying the dialougue and nextButton
+        story.displayScreen2();
+        story.displayButton();
+
+        //changing gameState to "screen3" if next is pressed
+        story.nextButton.mousePressed(()=>{
+            gameState = "screen3";
+        })
     }
 
     if(gameState === "forest")

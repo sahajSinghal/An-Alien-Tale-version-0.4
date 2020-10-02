@@ -22,6 +22,9 @@ class Player
 
         //making the sprite to display the player
         this.playerSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
+
+        //creating a property this.name whose value at the start is null
+        this.name = null;
     }
 
     display()
