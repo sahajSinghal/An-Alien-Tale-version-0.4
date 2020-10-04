@@ -11,10 +11,10 @@ var player;
 var ground;
 
 //variables for platforms
-var platform1, platform2, platform3, platform4, platform5;
+var platform1, platform2, platform3, platform4, platform5, platform6, platform7;
 
 //creating a variable for the gameState and setting its value to be startPage
-var gameState = "forest";
+var gameState = "startPage";
 
 //creating a variable which stores the startImage
 var startImage;
@@ -54,7 +54,7 @@ function setup()
     backSprite.visible = false;
 
     //creating the player body and making it invisible
-    player = new Player(100,765);
+    player = new Player(300,765);
     player.playerSprite.visible = false;
 
     //creating the ground body and making it invisible
@@ -62,16 +62,26 @@ function setup()
     ground.groundSprite.visible = false;
 
     //creating the platforms and making them invisible
-    platform1 = new Platform(320,700,200,20);
+    platform1 = new Platform(520,700,200,20);
     platform1.platformSprite.visible = false;
-    platform2 = new Platform(540,500,200,20);
+
+    platform2 = new Platform(740,500,200,20);
     platform2.platformSprite.visible = false;
-    platform3 = new Platform(740,600,200,20);
+    
+    platform3 = new Platform(940,600,200,20);
     platform3.platformSprite.visible = false;
-    platform4 = new Platform(990,470,200,20);
+
+    platform4 = new Platform(1190,470,200,20);
     platform4.platformSprite.visible = false;
-    platform5 = new Platform(840,260,200,20);
+    
+    platform5 = new Platform(1040,260,200,20);
     platform5.platformSprite.visible = false;
+
+    platform6 = new Platform(800,100,200,20);
+    platform6.platformSprite.visible = false;
+
+    platform7 = new Platform(1150,60,200,20);
+    platform7.platformSprite.visible = false;
         
     //creating the object from the StartButtons class
     startButtons = new StartButtons();
@@ -261,6 +271,8 @@ function draw()
         platform3.platformSprite.visible = true;
         platform4.platformSprite.visible = true;
         platform5.platformSprite.visible = true;
+        platform6.platformSprite.visible = true;
+        platform7.platformSprite.visible = true;
     }
 
     //making sprites visible
@@ -272,14 +284,18 @@ function keyPressed()
 {
     if(gameState === "forest")
     {
+        if(player.body.position.x<1250)
         if(keyCode === RIGHT_ARROW)
         {
             Matter.Body.applyForce(player.body,player.body.position,{x : 20 , y : -100});
         }
 
-        if(keyCode === LEFT_ARROW)
+        if(player.body.position.x>250)
         {
-            Matter.Body.applyForce(player.body,player.body.position,{x : -20 , y : -100});
+            if(keyCode === LEFT_ARROW)
+            {
+                Matter.Body.applyForce(player.body,player.body.position,{x : -20 , y : -100});
+            }
         }
     }
 }
