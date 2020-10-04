@@ -14,10 +14,16 @@ var ground;
 var platform1, platform2, platform3, platform4, platform5;
 
 //creating a variable for the gameState and setting its value to be startPage
-var gameState = "startPage";
+var gameState = "forest";
 
 //creating a variable which stores the startImage
 var startImage;
+
+//creating a variable which stores the forestImage
+var forestImage;
+
+//creating a sprite for the background images
+var backSprite;
 
 //creating the variable for the start buttons
 var startButtons;
@@ -29,6 +35,9 @@ function preload()
 {
     //loading the startImage
     startImage = loadImage("Images/CoverPage.png");
+
+    //loading the forestImage
+    forestImage = loadImage("Images/forest of fog.png");
 }
 
 function setup()
@@ -40,12 +49,16 @@ function setup()
     engine = Engine.create();
     world = engine.world;
 
+    //creating the backSprite and making it invisible
+    backSprite = createSprite(765,0,6000,4000);
+    backSprite.visible = false;
+
     //creating the player body and making it invisible
     player = new Player(100,765);
     player.playerSprite.visible = false;
 
     //creating the ground body and making it invisible
-    ground = new Ground(600,790,1200,20);
+    ground = new Ground(765,790,2734,20);
     ground.groundSprite.visible = false;
 
     //creating the platforms and making them invisible
@@ -74,7 +87,6 @@ function draw()
 {
     //background is white
     background("white");
-
 
     if(gameState === "startPage")
     {   
@@ -232,6 +244,9 @@ function draw()
         //hiding the last elements of the story
         story.hide();
 
+        backSprite.visible = true;
+        backSprite.addImage(forestImage);
+
         //displaying the player
         player.display();
         player.playerSprite.visible = true;
@@ -251,9 +266,10 @@ function draw()
         platform4.platformSprite.visible = true;
         platform5.display();
         platform5.platformSprite.visible = true;
-    }
 
-    console.log(gameState);
+        console.log(ground.groundSprite.x,ground.groundSprite.y,ground.groundSprite.width,ground.groundSprite.height);
+        console.log(ground.body.position.x,ground.body.position.y,ground.width,ground.height);
+    }
 
     //making sprites visible
     drawSprites();

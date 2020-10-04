@@ -25,6 +25,8 @@ class Ground
 
     display()
     {
+        rectMode(CENTER);
+
         //updating the position of the ground's sprite
         this.groundSprite.x = this.body.position.x;
         this.groundSprite.y = this.body.position.y;
