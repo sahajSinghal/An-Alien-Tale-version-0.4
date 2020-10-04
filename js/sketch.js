@@ -64,22 +64,16 @@ function setup()
     //creating the platforms and making them invisible
     platform1 = new Platform(520,700,200,20);
     platform1.platformSprite.visible = false;
-
     platform2 = new Platform(740,500,200,20);
     platform2.platformSprite.visible = false;
-    
     platform3 = new Platform(940,600,200,20);
     platform3.platformSprite.visible = false;
-
     platform4 = new Platform(1190,470,200,20);
     platform4.platformSprite.visible = false;
-    
     platform5 = new Platform(1040,260,200,20);
     platform5.platformSprite.visible = false;
-
     platform6 = new Platform(800,100,200,20);
     platform6.platformSprite.visible = false;
-
     platform7 = new Platform(1150,60,200,20);
     platform7.platformSprite.visible = false;
         
