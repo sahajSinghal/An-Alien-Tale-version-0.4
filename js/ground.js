@@ -22,13 +22,4 @@ class Ground
         //making the sprite to display the ground
         this.groundSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
     }
-
-    display()
-    {
-        rectMode(CENTER);
-
-        //updating the position of the ground's sprite
-        this.groundSprite.x = this.body.position.x;
-        this.groundSprite.y = this.body.position.y;
-    }
 }

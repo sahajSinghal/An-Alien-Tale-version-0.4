@@ -244,6 +244,7 @@ function draw()
         //hiding the last elements of the story
         story.hide();
 
+        //making the backgroundSprite visible
         backSprite.visible = true;
         backSprite.addImage(forestImage);
 
@@ -252,23 +253,14 @@ function draw()
         player.playerSprite.visible = true;
 
         //displaying the ground
-        ground.display();
         ground.groundSprite.visible = true;
 
         //displaying the platforms
-        platform1.display();
         platform1.platformSprite.visible = true;
-        platform2.display();
         platform2.platformSprite.visible = true;
-        platform3.display();
         platform3.platformSprite.visible = true;
-        platform4.display();
         platform4.platformSprite.visible = true;
-        platform5.display();
         platform5.platformSprite.visible = true;
-
-        console.log(ground.groundSprite.x,ground.groundSprite.y,ground.groundSprite.width,ground.groundSprite.height);
-        console.log(ground.body.position.x,ground.body.position.y,ground.width,ground.height);
     }
 
     //making sprites visible

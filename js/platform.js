@@ -22,11 +22,4 @@ class Platform
         //making the sprite to display the platforms
         this.platformSprite = createSprite(this.body.position.x,this.body.position.y,this.width,this.height);
     }
-
-    display()
-    {
-        //updating the position of the platform's sprites
-        this.platformSprite.x = this.body.position.x;
-        this.platformSprite.y = this.body.position.y;
-    }
 }
